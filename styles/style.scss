@@ -1,0 +1,362 @@
+@import 'reset';
+@import 'colors';
+
+
+html {
+    height: 100%;
+  }
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+.links {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    
+}
+
+
+
+.links:hover {
+    text-decoration: underline;
+}
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+  }
+
+nav {
+    position: relative;
+    height: 85px;
+    width: 100%;
+    
+    .logo {
+        position: absolute;
+        cursor: pointer;
+        left: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+
+    .hamburguer {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+    }
+
+    .nav-links {
+        z-index: 1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, -30%);
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    }
+
+    .nav-links-desktop {
+        display:none;
+    }
+
+    .links {
+        font-weight: 700;
+    }
+}
+
+main {
+
+    .gray-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $Light-Grayish-Blue;
+        border-bottom-left-radius: 50px;
+        width: 50%;
+        height: 50vh;
+        z-index: -999;
+    }
+
+    .image-container {
+        padding: 0;
+        right: 0;
+        width: 100%;
+        height: 350px;
+        
+        display:flex;
+        justify-content: center;
+        padding-top:40px;
+
+        img {
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+        height: 110%;
+           
+        }
+
+    }
+
+
+    .block {
+        max-width: 675px;
+        width: 90%;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .name {
+            text-align: left;
+            text-transform: uppercase;
+            color:  $Grayish-Blue;
+            letter-spacing: 3px;
+            font-size: 0.9em;  
+           .new {
+                margin-right: 8px;
+                background-color:$Very-Dark-Blue;
+                color: white;
+                background: #242942;
+                padding: 5px 10px;
+                border-radius: 15px;
+                font-weight: bold;
+
+           }
+           
+          
+        
+      }
+
+      .button-container {
+          margin-top: 30px;
+          display: flex;
+          justify-content: flex-start;
+
+
+        
+          button {
+            background: #ff5c5c;
+            border: none;
+            font-size: 14px;
+            font-family: "Barlow", sans-serif;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            margin: 8px 0;
+            cursor: pointer;
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-right: 5px;
+          }
+    }
+
+      h1 {
+        text-align: left;
+        font-weight: 700;
+        color: $Very-Dark-Blue;
+        text-transform: uppercase;
+      }
+      
+      p {
+        text-align: left;
+        color:   $Grayish-Blue; 
+      }
+}
+
+.block > * {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+}
+
+
+footer {
+    font-size: 0.8rem;
+    text-justify: auto;
+    text-align: center;
+    height: 10%;
+    
+}
+
+@media screen and (min-width: 426px) {
+    nav {
+        
+        .hamburguer {
+            display:none;
+        }
+        .nav-links-desktop {
+            margin-top: 20px;
+            width: 50%;
+            float: right;
+            display: flex;
+            
+
+            li {
+                display: inline-block;
+                margin: 0 auto;
+            }
+
+        }
+
+        .nav-links-desktop:last-child {
+            color: $Grayish-Blue;
+        }
+        
+        .links-login {
+            color: $Grayish-Blue;
+        }
+
+        
+
+        
+    }
+
+    
+    main {
+
+    
+
+        .block {
+            margin-left: 20px;
+            max-width: 450px;
+
+            * {
+                margin: 20px auto;
+            }
+
+            .name {
+                font-size: 0.7em;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                padding-right: 25%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 689px) {
+    nav {
+        
+        .logo {
+            position: absolute;
+            cursor: pointer;
+            left: 13%;
+            top: 50%;
+            transform: translate(-15%, -50%);
+        }
+
+        .hamburguer {
+            display:none;
+        }
+        .nav-links-desktop {
+            margin-top: 20px;
+
+            width: 50%;
+            float: right;
+            display: flex;
+
+            li {
+                display: inline-block;
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+
+        .block {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .block > * {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 1023px) { 
+
+main {
+    .block {
+        margin-left: 10%;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .block > * {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+}
+
+@media screen and (min-width: 1200px) { 
+
+    nav {
+        
+        .logo {
+            
+            left: 15%;
+            
+        }
+    }
+
+    main {
+        .block {
+            margin-left: 15%;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    
+        .block > * {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    }
